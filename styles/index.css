@@ -4,6 +4,7 @@ body{
     padding: 0;
     background: #14B0BF;
     transition: background 2s;
+    overflow: hidden;
 }
 body.time_switch{
     background: #2E4482;
@@ -232,8 +233,9 @@ div.index_content .index_tree01_base{
     display: block;
     transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(450px,-450px);
     box-shadow: -20px 20px 10px 0px rgba(0,0,0,0.5);
-    transition: transform 2.5s;
-    will-change: transform;
+    transition: transform 2.5s, opacity 1s;
+    opacity: 0;
+    will-change: transform, opacity;
 }
 div.index_content .index_tree01_base:before{
     content: '';
@@ -265,8 +267,9 @@ div.index_content .index_tree01_leaf{
     background: #DDF3AA;
     text-align: center;
     transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(450px,-450px);
-    transition: transform 2.5s;
-    will-change: transform;
+    transition: transform 2.5s, opacity 1s;
+    opacity: 0;
+    will-change: transform, opacity;
 }
 div.index_content .index_tree01_leaf:before{
     content: '';
@@ -288,14 +291,6 @@ div.index_content .index_tree01_leaf:after{
     background: #798F46;
     transform: skewX(-45deg)
 }
-div.index_content .index_tree01_base.spawn_tree{
-    transform: rotate(0deg) translateY(0px) rotate(-30deg) skew(25deg);
-    transition: transform 2.5s;
-}
-div.index_content .index_tree01_leaf.spawn_tree{
-    transform: perspective(1000px) rotate(-30deg) skew(25deg) translateY(0);
-    transition: transform 2.5s;
-}
     /* tree02 */
 div.index_content .index_tree02{
     position: absolute;
@@ -310,8 +305,9 @@ div.index_content .index_tree02_base{
     display: block;
     transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(450px,-450px);
     box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
-    transition: transform 2.5s;
-    will-change: transform;
+    transition: transform 2.5s, opacity 1s;
+    opacity: 0;
+    will-change: transform, opacity;
 }
 div.index_content .index_tree02_base:before{
     content: '';
@@ -342,8 +338,9 @@ div.index_content .index_tree02_leaf01{
     display: block;
     background: #DDF3AA;
     transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(450px,-450px);
-    transition: transform 2.5s;
-    will-change: transform;
+    transition: transform 2.5s, opacity 1s;
+    opacity: 0;
+    will-change: transform, opacity;
 }
 div.index_content .index_tree02_leaf01:before{
     content: '';
@@ -374,8 +371,9 @@ div.index_content .index_tree02_leaf02{
     display: block;
     background: #DDF3AA;
     transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(450px,-450px);
-    transition: transform 2.5s;
-    will-change: transform;
+    transition: transform 2.5s, opacity 1s;
+    opacity: 0;
+    will-change: transform, opacity;
 }
 div.index_content .index_tree02_leaf02:before{
     content: '';
@@ -397,17 +395,10 @@ div.index_content .index_tree02_leaf02:after{
     background: #798F46;
     transform: skewX(-45deg)
 }
-div.index_content .index_tree02_base.spawn_tree{
+div.index_content .index_tree01_base.spawn_tree, div.index_content .index_tree01_leaf.spawn_tree, div.index_content .index_tree02_base.spawn_tree, div.index_content .index_tree02_leaf01.spawn_tree, div.index_content .index_tree02_leaf02.spawn_tree{
     transform: rotate(0deg) translateY(0px) rotate(-30deg) skew(25deg);
-    transition: transform 2.5s;
-}
-div.index_content .index_tree02_leaf01.spawn_tree{
-    transform: perspective(1000px) rotate(-30deg) skew(25deg) translateY(0);
-    transition: transform 2.5s;
-}
-div.index_content .index_tree02_leaf02.spawn_tree{
-    transform: perspective(1000px) rotate(-30deg) skew(25deg) translateY(0);
-    transition: transform 2.5s;
+    transition: transform 2.5s, opacity 1s;
+    opacity: 1;
 }
 
 /* tree falling leaves */
@@ -419,8 +410,9 @@ div.index_content .index_tree_leaves_falling .index_tree_leaf_falling{
     background: #DDF3AA;
     box-shadow: -10px 10px 10px rgba(0,0,0,0.5);
     transform: perspective(1000px) rotate(-30deg) skew(25deg);
-    transition: transform 2.5s;
-    will-change: transform;
+    transition: transform 2.5s, opacity 1s;
+    opacity: 0;
+    will-change: transform, opacity;
     z-index: 30;
 }
 div.index_content .index_tree_leaves_falling .index_tree_leaf_falling:before{
@@ -525,8 +517,9 @@ div.index_content .index_campfire_wood01{
     background: #9C8156;
     box-shadow: -10px 10px 10px rgba(0,0,0,0.5);
     transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(450px,-450px);
-    transition: transform 2.5s;
-    will-change: transform;
+    transition: transform 2.5s, opacity 1s;
+    opacity: 0;
+    will-change: transform, opacity;
 }
 div.index_content .index_campfire_wood01:before{
     content: '';
@@ -558,8 +551,9 @@ div.index_content .index_campfire_wood02{
     background: #9C8156;
     box-shadow: -10px 10px 10px rgba(0,0,0,0.5);
     transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(450px,-450px);
-    transition: transform 2.5s;
-    will-change: transform;
+    transition: transform 2.5s, opacity 1s;
+    opacity: 0;
+    will-change: transform, opacity;
 }
 div.index_content .index_campfire_wood02:before{
     content: '';
@@ -583,7 +577,8 @@ div.index_content .index_campfire_wood02:after{
 }
 div.index_content .index_campfire_base.spawn_campfire{
     transform: rotate(0deg) translateY(0px) rotate(-30deg) skew(25deg);
-    transition: transform 2.5s;
+    transition: transform 2.5s, opacity 1s;
+    opacity: 1;
 }
     /* fire */
 div.index_content .index_campfire_fire{
@@ -732,23 +727,23 @@ div.index_content .index_weather .index_star:nth-child(2){
     animation-delay: 3s;
 }
 div.index_content .index_weather .index_star:nth-child(3){
-    left: 0%;
-    bottom: 160%;
+    left: 100%;
+    bottom: 70%;
     animation-delay: 6s;
 }
 div.index_content .index_weather .index_star:nth-child(4){
-    left: 70%;
-    bottom: 150%;
+    left: 90%;
+    bottom: 180%;
     animation-delay: 9s;
 }
 div.index_content .index_weather .index_star:nth-child(5){
-    left: 90%;
-    bottom: 180%;
+    left: 70%;
+    bottom: 150%;
     animation-delay: 12s;
 }
 div.index_content .index_weather .index_star:nth-child(6){
-    left: 100%;
-    bottom: 70%;
+    left: 0%;
+    bottom: 160%;
     animation-delay: 15s;
 }
 div.index_content .index_weather .index_star:nth-child(7){
@@ -772,12 +767,66 @@ div.index_content .index_weather .index_star:nth-child(7){
     /* rain */
 div.index_content .index_weather .index_rain div{
     position: absolute;
-    width: 20px;
-    height: 1px;
+    width: 30px;
+    height: 1.5px;
     background: linear-gradient(-45deg, white, rgba(0, 0, 255, 0));
     transform: rotate(135deg);
+    z-index: 100;
+    bottom: 170%;
+    animation: raining ease 4s infinite;
     will-change: transform, opacity;
-    z-index: 99;
-    bottom: 100%;
+    opacity: 0;
 }
+@keyframes raining{
+    0% {
+        opacity: 0;
+        transform: rotate(135deg) scaleX(1) translateX(-150px);
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(135deg) translateX(750px) ;
+        opacity: 0;
+    }
+}
+/* music slider */
 
+.index_music_slider.fade-in:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+.index_music_slider{
+    -webkit-appearance: none;
+    position: absolute;
+    width: 7.5vw;
+    height: 0.4vh;
+    bottom: 7%;
+    z-index: 9999;
+    border-radius: 5px;
+    background: #fff;
+    outline: none;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+.index_music_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.5vh;
+    height: 1.5vh;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+.index_music_slider::-moz-range-thumb {
+    width: 1.5vh;
+    height: 1.5vh;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+.index_music_slider.fade-in{
+    opacity: 1;
+    transition: opacity 0.7s;
+    will-change: opacity;
+}
