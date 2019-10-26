@@ -11,17 +11,14 @@ body.time_switch{
 }
 /* button */
 ul.index_icon_container{
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
+    margin: 75vh auto 0 auto;
     padding: 0;
     display: flex;
+    justify-content: center;
 }
 ul.index_icon_container li{
     list-style: none;
-    margin: 0 40px;
+    margin: 0 3vw;
 }
 ul.index_icon_container li a img{
     font-size: 40px;
@@ -34,8 +31,8 @@ ul.index_icon_container li a img{
 }
 ul.index_icon_container li a{
     position: relative;
-    height: 80px;
-    width: 80px;
+    height: 7vw;
+    width: 7vw;
     display: block;
     background: #EFD9CE;
     text-align: center;
@@ -609,4 +606,105 @@ div.index_content .index_weather .index_moon{
 }
 div.index_content .index_weather .index_moon.time_switch{
     transform: translateY(0px);
+}
+
+/* tree falling leaves */
+div.index_content .index_tree_leaves_falling .index_tree_leaf_falling{
+    position: absolute;
+    height: 2px;
+    width: 2px;
+    display: block;
+    background: #DDF3AA;
+    box-shadow: -10px 10px 10px rgba(0,0,0,0.5);
+    transform: perspective(1000px) rotate(-30deg) skew(25deg);
+    transition: transform 2.5s;
+    will-change: transform;
+    z-index: 30;
+}
+div.index_content .index_tree_leaves_falling .index_tree_leaf_falling:before{
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: -2px;
+    height: 100%;
+    width: 2px;
+    background: #ABC178;
+    transform: skewY(-45deg)
+}
+div.index_content .index_tree_leaves_falling .index_tree_leaf_falling:after{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: -1px;
+    height: 2px;
+    width: 100%;
+    background: #798F46;
+    transform: skewX(-45deg)
+}
+div.index_content .index_tree_leaves_falling .index_tree_leaf_falling{
+    opacity: 0;
+}
+div.index_content .index_tree_leaves_falling .index_tree_leaf_falling.spawn_leaves_falling{
+    transform: translateY(0px) rotate(-30deg) skew(25deg);
+    animation: 4s leaf_falling ease infinite;
+    will-change: transform, opacity;
+}
+@keyframes leaf_falling{
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    90% {transform: translateY(90px) rotate(-30deg) skew(25deg);}
+    100% {opacity: 0;}
+}
+
+    /* tree01 leaves */
+div.index_content .index_tree_leaves_falling .index_tree_leaf_falling:nth-child(1){
+    left: -3%;
+    bottom: 80%;
+    animation-delay: 0s !important;
+}
+div.index_content .index_tree_leaves_falling .index_tree_leaf_falling:nth-child(2){
+    left: 16%;
+    bottom: 83%;
+    animation-delay: 0.800s !important;
+}
+div.index_content .index_tree_leaves_falling .index_tree_leaf_falling:nth-child(3){
+    left: 7%;
+    bottom: 81%;
+    animation-delay: 1.600s !important;
+}
+div.index_content .index_tree_leaves_falling .index_tree_leaf_falling:nth-child(4){
+    left: 19%;
+    bottom: 73%;
+    animation-delay: 2.400s !important;
+}
+div.index_content .index_tree_leaves_falling .index_tree_leaf_falling:nth-child(5){
+    left: 26%;
+    bottom: 81%;
+    animation-delay: 3.200s !important;
+}
+    /* tree02 leaves */
+div.index_content .index_tree_leaves_falling .index_tree_leaf_falling:nth-child(6){
+    right: -9%;
+    bottom: 55%;
+    animation-delay: 0s !important;
+}
+div.index_content .index_tree_leaves_falling .index_tree_leaf_falling:nth-child(7){
+    right: 0%;
+    bottom: 62%;
+    animation-delay: 0.800s !important;
+}
+div.index_content .index_tree_leaves_falling .index_tree_leaf_falling:nth-child(8){
+    right: -7%;
+    bottom: 65%;
+    animation-delay: 1.600s !important;
+}
+div.index_content .index_tree_leaves_falling .index_tree_leaf_falling:nth-child(9){
+    right: -19%;
+    bottom: 60%;
+    animation-delay: 2.400s !important;
+}
+div.index_content .index_tree_leaves_falling .index_tree_leaf_falling:nth-child(10){
+    right: -21%;
+    bottom: 61%;
+    animation-delay: 3.200s !important;
 }
