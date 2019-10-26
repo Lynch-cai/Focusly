@@ -20,8 +20,9 @@ ul.index_icon_container{
 ul.index_icon_container li{
     list-style: none;
     margin: 0 3vw;
+    cursor: pointer;
 }
-ul.index_icon_container li a img{
+ul.index_icon_container li span img{
     font-size: 40px;
     line-height: 80px;
     transition: 0.5s;
@@ -29,8 +30,9 @@ ul.index_icon_container li a img{
     height: 100%;
     justify-content: center;
     align-items: center;
+    pointer-events:none;
 }
-ul.index_icon_container li a{
+ul.index_icon_container li span{
     position: relative;
     height: 7vw;
     width: 7vw;
@@ -41,7 +43,7 @@ ul.index_icon_container li a{
     box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
     transition: transform 0.5s, box-shadow 0.5s, background 0.5s;
 }
-ul.index_icon_container li a:before{
+ul.index_icon_container li span:before{
     content: '';
     position: absolute;
     top: 10px;
@@ -52,7 +54,7 @@ ul.index_icon_container li a:before{
     transform: skewY(-45deg);
     transition: background 0.5s;
 }
-ul.index_icon_container li a:after{
+ul.index_icon_container li span:after{
     content: '';
     position: absolute;
     bottom: -20px;
@@ -64,24 +66,24 @@ ul.index_icon_container li a:after{
     transition: background 0.5s;
 }
     /* button hover */
-ul.index_icon_container li a.button_hover:hover{
+ul.index_icon_container li span.button_hover:hover{
     transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(15px, -15px);
     box-shadow: -35px 35px 25px rgba(0,0,0,0.5);
     transition: transform 0.5s, box-shadow 0.5s, background 0.5s;
 }
     /* button pressed */
-ul li a.button_pressed{
+ul li span.button_pressed{
     transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(-5px, 5px);
     box-shadow: -17px 17px 5px rgba(0,0,0,0.5);
     transition: transform 0.5s, box-shadow 0.5s, background 0.5s;
 }
-ul.index_icon_container li a.button_pressed{
+ul.index_icon_container li span.button_pressed{
     background: #8DD69E;
 }
-ul.index_icon_container li a.button_pressed:before{
+ul.index_icon_container li span.button_pressed:before{
     background: #81C491;
 }
-ul.index_icon_container li a.button_pressed:after{
+ul.index_icon_container li span.button_pressed:after{
     background: #74AF82;
 }
 /* platform ground*/

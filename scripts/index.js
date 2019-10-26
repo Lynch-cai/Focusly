@@ -10,7 +10,7 @@ let campfire = document.querySelectorAll('.index_campfire_base')
 let campfire_flames = document.querySelector('.index_campfire_fire')
 let leaves_falling = document.querySelectorAll('.index_tree_leaf_falling')
 let rain = document.querySelector('.index_rain')
-let icons = document.querySelectorAll('ul.index_icon_container a')
+let icons = document.querySelectorAll('ul.index_icon_container span')
 let night_active = false, river_active = false, forest_active = false, campfire_active = false, rain_active = false, rain_first_click = true
 const sound_night = new Audio ('music/night.mp3')
 const sound_river = new Audio ('music/river.mp3')
