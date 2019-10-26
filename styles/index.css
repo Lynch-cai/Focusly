@@ -800,7 +800,7 @@ div.index_content .index_weather .index_rain div{
     position: absolute;
     width: 7.5vw;
     height: 0.4vh;
-    bottom: 7%;
+    bottom: 3%;
     z-index: 9999;
     border-radius: 5px;
     background: #fff;
