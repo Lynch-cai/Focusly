@@ -793,7 +793,6 @@ div.index_content .index_weather .index_rain div{
     }
 }
 /* music slider */
-
 .index_music_slider.fade-in:hover {
     opacity: 1; /* Fully shown on mouse-over */
   }
