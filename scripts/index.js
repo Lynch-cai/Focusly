@@ -64,7 +64,7 @@ class Sounds_and_animations {
             }
         )
         this.$icons[1].addEventListener( // [ICON 02 / SOUND 02] change grass width & add river with animation
-            'click',
+            'click', // ALERT: glitch problem when clicking too fast 
             ()=>{
                 this.$grass_platform.classList.toggle('part_platform')
                 this.$grass_platform.classList.toggle('whole_platform')
