@@ -1,23 +1,4 @@
 <!DOCTYPE html>
-<!-- 
-    Disclaimer: 
-    Sources of each icon below:
-    Moon icon : https://www.flaticon.com/authors/good-ware
-    River icon : https://www.flaticon.com/authors/freepik
-    Tree icon : https://www.flaticon.com/authors/good-ware
-    Fire icon : https://www.flaticon.com/authors/those-icons
-    Rain icon : https://www.flaticon.com/authors/freepik
-    
-    Sources of each sound effect:
-    Forest : https://www.youtube.com/watch?v=7QcfjDKmN_0
-    River : https://www.youtube.com/watch?v=lKGU-Q-bp9w
-    Fire : https://www.youtube.com/watch?v=eltuLJlW40A
-    Night : https://www.youtube.com/watch?v=QsHowU57nic
-    Rain : https://www.youtube.com/watch?v=Mr9T-943BnE
-    
-    Flames is inspired from Zed Dash
-    The idea is inspired from Noisli
--->
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -31,16 +12,16 @@
             <div>
             </div>
             <div class="index_content">
-                <div class="index_ground">
-                    <div class="index_ground_grass whole_platform"></div>
+                <div class="index_ground js-index_ground">
+                    <div class="index_ground_grass js-index_ground_grass whole_platform"></div>
                     <div class="index_ground_dirt"></div>
                 </div>
-                <div class="index_river"></div>
-                <div class="index_tree01">
+                <div class="index_river js-index_river"></div>
+                <div class="index_tree01 js-index_tree01">
                     <div class="index_tree01_base"></div>
                     <div class="index_tree01_leaf"></div>
                 </div>
-                <div class="index_tree_leaves_falling">
+                <div class="index_tree_leaves_falling js-index_tree_leaves_falling">
                     <div class="index_tree_leaf_falling" alt="tree01"></div>
                     <div class="index_tree_leaf_falling" alt="tree01"></div>
                     <div class="index_tree_leaf_falling" alt="tree01"></div>
@@ -52,15 +33,15 @@
                     <div class="index_tree_leaf_falling" alt="tree02"></div>
                     <div class="index_tree_leaf_falling" alt="tree02"></div>
                 </div>
-                <div class="index_tree02">
+                <div class="index_tree02 js-index_tree02">
                     <div class="index_tree02_base"></div>
                     <div class="index_tree02_leaf01"></div>
                     <div class="index_tree02_leaf02"></div>
                 </div>
-                <div class="index_campfire">
-                    <div class="index_campfire_wood01 index_campfire_base"></div>
-                    <div class="index_campfire_wood02 index_campfire_base"></div>
-                    <div class="index_campfire_fire">
+                <div class="index_campfire js-index_campfire">
+                    <div class="index_campfire_wood01 index_campfire_base js-index_campfire_base"></div>
+                    <div class="index_campfire_wood02 index_campfire_base js-index_campfire_base"></div>
+                    <div class="index_campfire_fire js-index_campfire_fire">
                         <div class="index_campfire_fire_flames">
                             <div class="index_campfire_fire_flame"></div>
                             <div class="index_campfire_fire_flame"></div>
@@ -70,9 +51,9 @@
                      </div>
                 </div>
                 <div class="index_weather">
-                    <div class="index_sun"></div>
-                    <div class="index_moon"></div>
-                    <div class="index_stars">
+                    <div class="index_sun js-index_sun"></div>
+                    <div class="index_moon js-index_moon"></div>
+                    <div class="index_stars js-index_stars">
                         <div class="index_star"></div>
                         <div class="index_star"></div>
                         <div class="index_star"></div>
@@ -81,12 +62,10 @@
                         <div class="index_star"></div>
                         <div class="index_star"></div>
                     </div>
-                    <div class="index_rain">
-
-                    </div>
+                    <div class="index_rain js-index_rain"></div>
                 </div>
             </div>
-            <ul class="index_icon_container">
+            <ul class="index_icon_container js-index_icon_container">
                 <li><span class="button_hover"><img class="index_icon" src="icons/moon.svg"/></div></span><input type="range" min="1" max="100" value="50" class="index_music_slider"></div></li>
                 <li><span class="button_hover"><img class="index_icon" src="icons/river.svg"/></span><input type="range" min="1" max="100" value="50" class="index_music_slider"></li>
                 <li><span class="button_hover"><img class="index_icon" src="icons/tree.svg"/></span><input type="range" min="1" max="100" value="50" class="index_music_slider"></li>

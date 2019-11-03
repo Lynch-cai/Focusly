@@ -6,26 +6,26 @@ class Sounds_and_animations {
         this.sound_campfire = new Audio('music/campfire.mp3')
         this.sound_rain = new Audio('music/rain.mp3')
         this.sounds = [this.sound_night, this.sound_river, this.sound_forest, this.sound_campfire, this.sound_rain]
-        this.$music_slider = document.querySelectorAll('.index_icon_container li input')
+        this.$music_slider = document.querySelectorAll('.js-index_icon_container li input')
         this.sound_is_active = [0,0,0,0,0]
-        this.$icons = document.querySelectorAll('ul.index_icon_container span')
+        this.$icons = document.querySelectorAll('ul.js-index_icon_container span')
         this.$body = document.querySelector('body')
-        this.$sun = document.querySelector('.index_sun')
-        this.$moon = document.querySelector('.index_moon')
-        this.$stars = document.querySelectorAll('.index_star')
-        this.$grass_platform = document.querySelector('.index_ground_grass')
-        this.$river = document.querySelector('.index_river')
-        this.$tree01 = document.querySelectorAll('.index_tree01 div')
-        this.$tree02 = document.querySelectorAll('.index_tree02 div')
-        this.$campfire = document.querySelectorAll('.index_campfire_base')
-        this.$campfire_flames = document.querySelector('.index_campfire_fire')
-        this.$leaves_falling = document.querySelectorAll('.index_tree_leaf_falling')
-        this.$rain = document.querySelector('.index_rain')
-        this.$icons = document.querySelectorAll('ul.index_icon_container span')
-        this.$music_slider = document.querySelectorAll('.index_icon_container li input')
-        this.rain_first_click = true
+        this.$sun = document.querySelector('.js-index_sun')
+        this.$moon = document.querySelector('.js-index_moon')
+        this.$stars = document.querySelectorAll('.js-index_stars div')
+        this.$grass_platform = document.querySelector('.js-index_ground_grass')
+        this.$river = document.querySelector('.js-index_river')
+        this.$tree01 = document.querySelectorAll('.js-index_tree01 div')
+        this.$tree02 = document.querySelectorAll('.js-index_tree02 div')
+        this.$campfire = document.querySelectorAll('.js-index_campfire_base')
+        this.$campfire_flames = document.querySelector('.js-index_campfire_fire')
+        this.$leaves_falling = document.querySelectorAll('.js-index_tree_leaves_falling div')
+        this.$rain = document.querySelector('.js-index_rain')
+        this.$icons = document.querySelectorAll('ul.js-index_icon_container span')
+        this.$music_slider = document.querySelectorAll('.js-index_icon_container li input')
     }
     init(){
+        let rain_first_click = true // avoid infinite rain generation
         for (let i = 0; i < this.sounds.length; i++) { // repeat 5 times (or more if there's more sounds/icons)
             this.sounds[i].volume = 0.5 // set default volume to 0.5
             this.$icons[i].addEventListener(
@@ -64,7 +64,7 @@ class Sounds_and_animations {
             }
         )
         this.$icons[1].addEventListener( // [ICON 02 / SOUND 02] change grass width & add river with animation
-            'click', // ALERT: glitch problem when clicking too fast 
+            'click', // ALERT: glitch problem when clicking too fast
             ()=>{
                 this.$grass_platform.classList.toggle('part_platform')
                 this.$grass_platform.classList.toggle('whole_platform')

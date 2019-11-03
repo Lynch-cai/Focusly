@@ -175,9 +175,6 @@ div.index_content .index_ground_dirt:after{
 /* river */
 div.index_content .index_river{
     position: absolute;
-    /* left: 15px;
-    bottom: -62px;
-    height: 300px; */
     width: 75px;
     background: #77CBE5;
     transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0,0);
@@ -794,7 +791,7 @@ div.index_content .index_weather .index_rain div{
 }
 /* music slider */
 .index_music_slider.fade-in:hover {
-    opacity: 1; /* Fully shown on mouse-over */
+    opacity: 1;
   }
 .index_music_slider{
     -webkit-appearance: none;
