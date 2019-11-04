@@ -23,9 +23,9 @@ class Sounds_and_animations {
         this.$rain = document.querySelector('.js-index_rain')
         this.$icons = document.querySelectorAll('ul.js-index_icon_container span')
         this.$music_slider = document.querySelectorAll('.js-index_icon_container li input')
+        this.rain_first_click = true // avoid infinite rain generation
     }
     init(){
-        let rain_first_click = true // avoid infinite rain generation
         for (let i = 0; i < this.sounds.length; i++) { // repeat 5 times (or more if there's more sounds/icons)
             this.sounds[i].volume = 0.5 // set default volume to 0.5
             this.$icons[i].addEventListener(
