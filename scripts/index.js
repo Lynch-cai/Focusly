@@ -10,6 +10,7 @@ class Sounds_and_animations {
         this.sound_is_active = [0,0,0,0,0]
         this.$icons = document.querySelectorAll('ul.js-index_icon_container span')
         this.$body = document.querySelector('body')
+        this.$background = document.querySelector('.js-index_background')
         this.$sun = document.querySelector('.js-index_sun')
         this.$moon = document.querySelector('.js-index_moon')
         this.$stars = document.querySelectorAll('.js-index_stars div')
@@ -51,11 +52,20 @@ class Sounds_and_animations {
                     this.sounds[i].volume = (this.$music_slider[i].value / 100) - 0.01
                 }
             )
+            // for mobile user
+            this.$music_slider[i].addEventListener( // change music value
+                'touchend',
+                () => {
+                    console.log('test');
+                    
+                    this.sounds[i].volume = (this.$music_slider[i].value / 100) - 0.01
+                }
+            )
         }
         this.$icons[0].addEventListener( // [ICON 01 / SOUND 01] switch moon/sun & active stars shooting
             'click',
             ()=>{
-                this.$body.classList.toggle('time_switch')
+                this.$background.classList.toggle('time_switch')
                 this.$sun.classList.toggle('time_switch')
                 this.$moon.classList.toggle('time_switch')
                 for (let i = 0; i < this.$stars.length; i++) {

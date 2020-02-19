@@ -1,18 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
 /* sky */
-body{
+.index_background{
     margin: 0;
     padding: 0;
-    background: #14B0BF;
-    transition: background 2s;
+    background: linear-gradient(#5192fb, #664b72);
     overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
-body.time_switch{
-    background: #2E4482;
-    transition: background 2s;
+.index_background:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(#3845a3, #664b72);
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+  }
+
+.index_background.time_switch:before{
+    opacity: 1;
 }
 /* button */
 ul.index_icon_container{
-    margin: 75vh auto 0 auto;
+    display: flex;
+    align-items: flex-end;
+    margin: 0 auto;
+    bottom: 10%;
+    height: 90vh;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -669,7 +705,7 @@ div.index_content .index_campfire_fire_flame:nth-child(4){
 div.index_content .index_weather .index_sun{
     position: absolute;
     bottom: 115%;
-    right: -50px;
+    right: 50px;
     width: 75px;
     height: 75px;
     background-color: #FFEDAF;
@@ -686,7 +722,7 @@ div.index_content .index_weather .index_sun.time_switch{
     /* night: moon */
 div.index_content .index_weather .index_moon{
     bottom: 115%;
-    left: -75px;
+    left: 25px;
     width: 75px;
     height: 75px;
     background-color: transparent;
