@@ -329,7 +329,7 @@ div.index_content .index_tree01_leaf:after{
     /* tree02 */
 div.index_content .index_tree02{
     position: absolute;
-    left: 10%;
+    left: 40%;
     bottom: 70%;
     z-index: 20;
 }
@@ -704,8 +704,8 @@ div.index_content .index_campfire_fire_flame:nth-child(4){
     /* day: sun */
 div.index_content .index_weather .index_sun{
     position: absolute;
-    bottom: 115%;
-    right: 50px;
+    bottom: 110%;
+    right: -10px;
     width: 75px;
     height: 75px;
     background-color: #FFEDAF;
@@ -721,8 +721,8 @@ div.index_content .index_weather .index_sun.time_switch{
 }
     /* night: moon */
 div.index_content .index_weather .index_moon{
-    bottom: 115%;
-    left: 25px;
+    bottom: 110%;
+    left: -20px;
     width: 75px;
     height: 75px;
     background-color: transparent;
