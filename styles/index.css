@@ -486,27 +486,27 @@ div.index_content .index_tree_leaves_falling .index_tree_leaf_falling.spawn_leav
 }
     /* tree01 leaves */
 div.index_content .index_tree_leaves_falling .index_tree_leaf_falling:nth-child(1){
-    left: -3%;
+    left: 27%;
     bottom: 80%;
     animation-delay: 0s !important;
 }
 div.index_content .index_tree_leaves_falling .index_tree_leaf_falling:nth-child(2){
-    left: 16%;
+    left: 46%;
     bottom: 83%;
     animation-delay: 0.800s !important;
 }
 div.index_content .index_tree_leaves_falling .index_tree_leaf_falling:nth-child(3){
-    left: 7%;
+    left: 37%;
     bottom: 81%;
     animation-delay: 1.600s !important;
 }
 div.index_content .index_tree_leaves_falling .index_tree_leaf_falling:nth-child(4){
-    left: 19%;
+    left: 49%;
     bottom: 73%;
     animation-delay: 2.400s !important;
 }
 div.index_content .index_tree_leaves_falling .index_tree_leaf_falling:nth-child(5){
-    left: 26%;
+    left: 56%;
     bottom: 81%;
     animation-delay: 3.200s !important;
 }
