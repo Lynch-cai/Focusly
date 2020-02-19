@@ -154,7 +154,7 @@ div.index_content .index_ground_grass{
     position: absolute;
     height: 300px;
     display: block;
-    background: #5EA845;
+    background: #ACCB41;
     transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0,0);
     z-index: 10;
 }
@@ -164,7 +164,7 @@ div.index_content .index_ground_dirt{
     width: 300px;
     bottom: -24px;
     display: block;
-    background: #E8B133;
+    background: #B57866;
     transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0,0);
     z-index: 0;
 }
@@ -175,7 +175,7 @@ div.index_content .index_ground_grass:before{
     left: -20px;
     height: 100%;
     width: 20px;
-    background: #6F9A4A;
+    background: #85A329;
     transform: skewY(-45deg)
 }
 div.index_content .index_ground_grass:after{
@@ -185,7 +185,7 @@ div.index_content .index_ground_grass:after{
     left: -10px;
     height: 20px;
     width: 100%;
-    background: #64853F;
+    background: #769329;
     transform: skewX(-45deg)
 }
 div.index_content .index_ground_dirt:before{
@@ -195,7 +195,7 @@ div.index_content .index_ground_dirt:before{
     left: -80px;
     height: 100%;
     width: 80px;
-    background: #CD9B28;
+    background: #84614E;
     transform: skewY(-45deg)
 }
 div.index_content .index_ground_dirt:after{
@@ -205,7 +205,7 @@ div.index_content .index_ground_dirt:after{
     left: -40px;
     height: 80px;
     width: 100%;
-    background: #AE862E;
+    background: #714D3D;
     transform: skewX(-45deg)
 }
 /* river */
