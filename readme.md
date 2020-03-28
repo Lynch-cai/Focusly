@@ -1,3 +1,5 @@
+https://lynchcai.github.io/Focusly/
+
 How to use:
 Step 1 : Activate the sound on your device
 Step 2 : Click on any icon
