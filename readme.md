@@ -1,4 +1,4 @@
-https://lynchcai.github.io/Focusly/
+https://focusly.lynch-cai.com/
 
 How to use:
 Step 1 : Activate the sound on your device
